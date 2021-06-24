@@ -14,8 +14,6 @@ fun arrays(){
         println(item)
     }
 
-    //add to a list
-    interestingThings
 
 
 }
