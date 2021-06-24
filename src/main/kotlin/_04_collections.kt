@@ -1,42 +1,40 @@
+//collections in kotlin
 //arrays are mutable lists
 fun arrays(){
-    val interestingThings = arrayOf("Kotlin", "Django", "Programming")
-    val len =   interestingThings.size
+    // declaration array
+    val interestingThings  = arrayOf("Kotlin", "Django", "Android")
+
+    //checking the length(size) of an array
+    val len  = interestingThings.size
     println(len)
 
     //accessing an item by the index
-    println(interestingThings[0])
+    println(interestingThings[1])
 
-    //accessing an item by get
-    println(interestingThings.get(0))
-
-    for(item in interestingThings){
-        println(item)
-    }
-
-
-
-}
-
-//Lists are immutable
-fun lists(){
-    val items = listOf("Kotlin", "Django","Programming")
-    val len =   items.size
-    println(len)
-
-    //accessing an item by the index
-    println(items[0])
-
-    //accessing an item by get
-    println(items.get(0))
-
-    for(item in items){
+    //iterate over a list
+    for (item in interestingThings){
         println(item)
     }
 }
 
+//lists are immutable
+fun lists() {
+    //declaration of a list
+    val items = listOf<String>("Kotlin", "Django", "programming")
 
+    //checking the length(size) of an array
+    val len  = items.size
+    println(len)
 
+    //accessing an item by the index
+    println(items[1])
+
+    //iterate over a list
+    for (item in items){
+        println(item)
+    }
+
+}
 
 
 //more functional approach to collections iteration
@@ -54,11 +52,23 @@ fun collections(){
 
 }
 
-fun withMap(){
-    val map = mapOf(1 to "baraka", 2 to 23, 3 to "trainer")
-    map.forEach{ (key, value) -> print("$key - >  $value  ")
+
+//maps
+fun maps() {
+    //declaration of a map
+    val map = mapOf(1 to "baraka", 2 to "sam", 3 to "Mohammed")
+
+    //get the len(size)
+    val len = map.size
+    println(len)
+
+    //get an element
+    println(map.getValue(2))
+
+    //use for each to iterate on a map
+    map.forEach {
+            (key, value) -> println("$key ->  $value")
     }
-   println("@2 " + map.getValue(2 ))
 }
 
 //collections are immutable by default
