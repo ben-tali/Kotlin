@@ -1,61 +1,60 @@
-
 //control flow
-fun checkAge(age:Int){
-    if(age >= 45){
-        println("Too OLD")
-    }else if(age  >= 18){
+
+fun checkAge(age: Int) {
+    //simple if statement
+    if (age >= 45) {
+        println("You are too old")
+    } else if (age >= 18) {
         println("Allowed")
-    }else {
-        println("Seek parental advice")
+    } else {
+        println("Seek parental Advice")
     }
 }
 
-const val a= 10
-const val b= 49
-var big: Int = a
+//example two
+fun usingIfTwo(a:Int, b:Int){
+    var big: Int? = null
+    //short form if
+    if(a < b) big = b
+    //with else
+    big = if(a<b) b else  a
 
-//simple if example 2
-fun usingIf(){
-    if (a < b) big = b
-   // With else
-    if (a > b) {
-        big = a
-    } else {
-        big = b
-    }
     println(big)
 }
 
-// As expression
+//if as an expression
 fun ifAsAnExpression(a:Int, b:Int){
-    val max = if (a > b) a else b
+    val max = if(a>b) a else b
+    println(max)
 }
 
-//using the when statement
+// use a when statement
 fun usingWhen(x:Int){
-    when (x) {
+    when (x){
         1 -> println("x == 1")
-        2 -> println("x == 2")
-        else -> { // Note the block
-            println("x is neither 1 nor 2")
+        2 -> {
+            val y  = 90
+            println("x==2")
+        }
+        else -> {
+            //this is an else block
+            println("X is neither 1 nor 2")
         }
     }
 }
 
-fun usingWhenTwo(x:Int){
-    when (x) {
-        in 1..10 -> println("x is in the range")
-        !in 10..20 -> println("x is outside the range")
+//using when example 2
+fun checkAgeUsingWhen(age:Int){
+    when (age) {
+        in 1..17 -> println("Young to enter")
+        in 18..45 -> println("Legal age")
         else -> println("none of the above")
     }
 }
 
 
 fun main() {
-    checkAge(27)
-    checkAge(8)
-    checkAge(67)
-    usingIf()
-    usingWhen(1)
-    usingWhenTwo(9)
+    checkAgeUsingWhen(10)
+    checkAgeUsingWhen(18)
+    checkAgeUsingWhen(48)
 }
