@@ -1,4 +1,4 @@
-package io.baraka
+package io.baraka._02_classes
 
 class Student(
     val firstName: String = "John",

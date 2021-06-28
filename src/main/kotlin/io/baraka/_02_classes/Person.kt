@@ -1,4 +1,4 @@
-package io.baraka
+package io.baraka._02_classes
 
 //primary constructor
 class Person(val firstName: String, val lastName: String) {
